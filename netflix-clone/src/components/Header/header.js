@@ -27,7 +27,7 @@ const Header = () => {
                         <li><SearchIcon /> </li>
                         <li><NotificationsNoneIcon /></li>
                         <li><AccountBoxIcon /></li>
-                        <li><ArrowDropDownIcon /></li>
+                        <li className='arrow'><ArrowDropDownIcon /></li>
                     </ul>
                 </div>
             </div>
