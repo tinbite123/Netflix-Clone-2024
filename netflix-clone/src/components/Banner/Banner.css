@@ -1,9 +1,10 @@
 .banner {
     margin-top:-10vh;
-    height:80vh;
-    margin-top: -80px;
+    height: 85vh;
+    margin-top: -25px;
     color: white;
     object-fit: contain;
+    justify-content: center;
 }
 .banner_contens {
     margin-left: 30px;
@@ -15,14 +16,13 @@
     font-weight: 800;
     padding-bottom: 0.3rem;
 }
-
 .banner_description {
     width: 45rem;
     line-height: 1;
     padding: 1rem 0;
     font-size: 1rem;
     max-width: 360px;
-    height: 80px;
+    height: 90px;
 }
 .banner_button {
     cursor: pointer;
@@ -38,19 +38,32 @@
 }
 .play{
     color: #000;
+    font-size: large;
     background-color: #fff;
+    height: 41px;
+    width: 106px;
+    font-weight: bold;
+}
+.myList{
+    color: #000;
+    font-size: large;
+    height: 41px;
+    width: 106px;
+    font-weight: bold;
 }
 .banner_button:hover {
     color: #000;
     background-color: #c6c6c6; 
     transition: all0.2s;
+    height: 41px;
+    width: 101px;
 }
 .banner_fadeBottom {
-    height: 40vh;
+    height: 90vh;
     background-image: linear-gradient(
         180deg,
         transparent,
-        /* rgb(37, 37, 37, 0.91),
-        #111 */
+        /* rgb(37, 37, 37, 0.91), */
+        #2a2929
     );
 }
