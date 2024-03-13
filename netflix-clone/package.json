@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/tinbite123",
+  "homepage": "github/tinbite123",
   "name": "netflix-clone",
   "version": "0.1.0",
   "private": true,
@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages":"6.1.1",
     "github-pages": "^3.0.2"
   }
 }

@@ -10,30 +10,28 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 
     const base_url = "https://image.tmdb.org/t/p/original/";
     
-    useEffect (() => {
-      (async () => {
-        try {
-            console.log(fetchUrl)
-            const request = await axios.get(fetchUrl);
-            console.log(request,)
-            setMovie(request.data.results);
-        } catch (error) {
-          console.log("error", error);
-        }
-      })()
-    }, []);
+    useEffect(() => {
+      async function fetchData() {
+        const request = await axios.get(fetchUrl);
+        // console.log(request)
+        setMovie(request.data.results);
+        return request;
+      }
+      fetchData();
+    }, [fetchUrl]);
 
-    const handelClick = (movie) => {
-      if (trailerUrl) {
-        setTrailerUrl('')
-      } else {
-        movieTrailer(movie?.title || movie?.original_name)
-          .then((url) => {
-            console.log(url)
-            const urlParams = new URLSearchParams(new URL(url).search)
-            console.log(urlParams)
-            console.log(urlParams.get('v'))
-            setTrailerUrl(urlParams.get('v'));
+    const handelClick = (movie)=>{
+      if(trailerUrl){
+          setTrailerUrl('')
+      }else{
+          movieTrailer(movie?.title || movie?.orginal_name || movie?.name)
+          .then((url)=>{
+  const urlParams = new URLSearchParams(new URL(url).search)
+  console.log(url)
+  console.log(urlParams)
+  setTrailerUrl(urlParams.get('v'))
+          }) .catch(( error ) => {
+            console.log(error)
           })
       }
     }
