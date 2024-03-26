@@ -34,6 +34,12 @@ const RowList = () => {
             isLargeRow={true}
             />
 
+            <Row
+            title="ROMANCE MOVIES"
+            fetchUrl={requests.fetchRomanceMovies}
+            isLargeRow={true}
+            />
+
             <Row 
                 title="TV SHOWS"
                 fetchUrl={requests.fetchTvShows}
@@ -52,11 +58,6 @@ const RowList = () => {
             isLargeRow={true}
             /> 
 
-            <Row
-            title="ROMANCE MOVIES"
-            fetchUrl={requests.fetchRomanceMovies}
-            isLargeRow={true}
-            />
         </>
     )
 }
